@@ -74,7 +74,7 @@
   </div>
 
   <hr>
-@endsection
+
   <!-- Footer -->
 
 
@@ -82,12 +82,12 @@
 
 
   <!-- Contact Form JavaScript -->
-  <script src="{{asset('js/jqBootstrapValidation.js')}}"></script>
-  <script src="{{asset('js/contact_me.js')}}"></script>
+  <script src="js/jqBootstrapValidation.js"></script>
+  <script src="js/contact_me.js>"></script>
 
   <!-- Custom scripts for this template -->
 
-
+@endsection
 </body>
 
 </html>
