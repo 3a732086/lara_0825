@@ -24,10 +24,13 @@ Route::get('/', function () {
         'content'=>'testcontent',
     ]);*/
 
-    $post = new Post();
+    /*$post = new Post();
     $post->title='testtitle';
     $post->content='testcontent';
-    $post->save();
+    $post->save();*/
+
+    $posts= Post::all();
+    dd($posts);
 
 });
 
