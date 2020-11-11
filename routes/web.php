@@ -2,6 +2,7 @@
 
 
 use App\Http\Controllers\PostsController;
+use App\Models\Post;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,7 +17,18 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    //return view('welcome');
+
+    /*Post::create([
+        'title'=>'testtitle',
+        'content'=>'testcontent',
+    ]);*/
+
+    $post = new Post();
+    $post->title='testtitle';
+    $post->content='testcontent';
+    $post->save();
+
 });
 
 Route::get('index',[PostsController::class,'index'])->name('posts.index');
@@ -26,3 +38,4 @@ Route::get('post',[PostsController::class,'show'])->name('posts.show');
 Route::get('about',[PostsController::class,'about'])->name('posts.about');
 
 Route::get('contact',[PostsController::class,'contact'])->name('posts.contact');
+
