@@ -44,10 +44,13 @@ Route::get('/', function () {
         'content'=>'updatedcontent',
     ]);*/
 
-    $post=Post::find(1);
+    /*$post=Post::find(1);
     $post->title='savedtitle';
     $post->content='savedcontent';
-    $post->save();
+    $post->save();*/
+
+    $post=Post::find(1);
+    $post->delete();
 
 
 });
